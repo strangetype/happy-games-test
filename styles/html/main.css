@@ -1,0 +1,125 @@
+.content-container {
+	transform-origin: left top;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+.main-container--landscape .content-container {
+	flex-direction: row;
+}
+
+.title {
+	text-align: center;
+	font-size: 64px;
+	padding: 0 64px;
+	margin-block-start: 64px;
+	margin-block-end: 64px;
+}
+
+.score-container {
+	text-align: right;
+	padding-right: 64px;
+	font-size: 48px;
+	margin-block-start: 64px;
+	margin-block-end: 64px;
+}
+
+.score-container div {
+	margin-bottom: .5em;
+}
+
+.score-success {
+	color: #0f0;
+}
+
+.score-fail {
+	color: #f00;
+}
+
+.container {
+	position: relative;
+	overflow: hidden;
+	border-radius: 16px;
+}
+
+.images-container {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.images-container--v {
+	flex-direction: row;
+}
+
+.images-container > .container:first-child {
+	margin-bottom: 16px;
+	margin-right: 0;
+}
+
+.images-container--v > .container:first-child {
+	margin-bottom: 0;
+	margin-right: 16px;
+}
+
+.mark {
+	position: absolute;
+	border-radius: 32px;
+	border: 16px solid white;
+	pointer-events: none;
+	box-sizing: border-box;
+	text-align: center;
+	line-height: 100%;
+	box-shadow: 0 0 16px #000;
+	text-shadow: 0 0 16px #000;
+}
+
+
+.mark.mark--success {
+	border-color: #0f0;
+}
+
+.mark.mark--fail {
+	border-color: #f00;
+	color: #f00;
+}
+
+.mark.mark--fail::after {
+	content: 'x';
+}
+
+
+.layerImage {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+
+.slot {
+	position: absolute;
+	box-sizing: content-box;
+	pointer-events: none;
+}
+
+.message {
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 1024px;
+	height: 256px;
+	text-align: center;
+	line-height: 256px;
+	border: 16px groove green;
+	color: green;
+	background: #fff;
+	border-radius: 32px;
+	box-shadow: 0 0 64px #000;
+	font-size: 84px;
+}
